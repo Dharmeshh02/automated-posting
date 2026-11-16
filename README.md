@@ -61,14 +61,62 @@ curl -X POST http://localhost:4000/posting \
   "success": true,
   "results": [
     {
+      "platform": "Discord",
+      "status": "success",
+      "posted_url": "https://discord.com/channels/@me/1571739614501281824/1571793951621652590",
+      "public_access": false,
+      "date": "2026-11-16",
+      "time": "13:18:00",
+      "error": null
+    },
+    {
       "platform": "Telegram",
       "status": "success",
-      "posted_url": "https://t.me/your_channel/17",
+      "posted_url": "https://t.me/dharmesh_test_posts/17",
       "public_access": true,
       "date": "2026-11-16",
       "time": "13:18:01",
       "error": null
     },
+    {
+      "platform": "Mastodon",
+      "status": "success",
+      "posted_url": "https://mastodon.social/@dharmeshmalviya/117625014236980426",
+      "public_access": true,
+      "date": "2026-11-16",
+      "time": "13:18:00",
+      "error": null
+    },
+    {
+      "platform": "Bluesky",
+      "status": "success",
+      "posted_url": "https://bsky.app/profile/dharmeshmalviya4.bsky.social/post/3n2fzzosn6t2z",
+      "public_access": true,
+      "date": "2026-11-16",
+      "time": "13:18:01",
+      "error": null
+    },
+    {
+      "platform": "Dev.to",
+      "status": "success",
+      "posted_url": "https://dev.to/dharmesh_malviya_f5127639/hello-mera-pehla-automated-post-check-this-httpsexample-3cn",
+      "public_access": true,
+      "date": "2026-11-16",
+      "time": "13:18:00",
+      "error": null
+    }
+  ]
+}
+```
+
+### Example when one platform fails
+
+If a platform fails, the others still succeed:
+
+```json
+{
+  "success": true,
+  "results": [
     {
       "platform": "Mastodon",
       "status": "failed",
@@ -81,7 +129,6 @@ curl -X POST http://localhost:4000/posting \
   ]
 }
 ```
-
 ## Validation rules
 
 | Case | Result |
